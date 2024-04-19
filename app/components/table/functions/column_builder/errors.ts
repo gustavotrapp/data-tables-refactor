@@ -1,0 +1,1 @@
+export const ACCESSOR_FUNCTIONS_SHOULD_HAVE_SEARCH_COLUMN_ORDER_COLUMN_AND_RENDER = "Accessor functions should have search column, order column and render";

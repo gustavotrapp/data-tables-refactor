@@ -1,0 +1,1 @@
+export const isFunction = (data: unknown): data is Function => typeof data === "function";

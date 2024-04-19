@@ -1,0 +1,21 @@
+datasource db {
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model tema {
+    id       String    @id @default(cuid())
+    nome     String
+    subtema subtema[]
+}
+
+model subtema {
+    id     String @id @default(cuid())
+    nome   String
+    tema   tema   @relation(fields: [temaId], references: [id])
+    temaId String
+}
